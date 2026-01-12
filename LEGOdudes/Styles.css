@@ -67,6 +67,7 @@ h3 {
     max-width: var(--maxwidth);
     background-color: var(--white);
     margin: 0 auto;
+    position: relative;
 
 }
 
@@ -124,13 +125,14 @@ nav {
 }
 
 main {
+    #product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-left: 1rem;
     padding-right: 1rem;
     gap: 1rem;
-    
+    }
     
     h2 {
         width: 100%;
@@ -146,6 +148,7 @@ main {
         box-sizing: border-box;
         border-bottom: 1rem solid var(--green);
         margin-bottom: 1rem;
+        position-try-order: normal 100; 
 
         a {
             color: var(--yellow);
@@ -175,4 +178,27 @@ main {
             width: 100%
         }
     }
+}
+
+/* HANDLEVOGN */
+#cart {
+    max-width: 550px;
+    background: var(--black);
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem; 
+    position: absolute;
+    top: 74px;
+    right: 0;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    table {
+        width: 100%;
+        color: var(--white);
+     
+    }
+
 }
