@@ -27,3 +27,33 @@ function addToCart(prodid) {
     document.getElementById("cart-quantity").innerHTML = cart.length
 
 }
+
+//Genererer handlevogn
+function showCart() {
+    //Unike produkter
+    let uniqueItems = new Set(cart)
+    let uniqueArray = [...uniqueItems]
+    //Oversikt over antall per produkt
+    let cartItems = []
+    uniqueArray.map(item => {
+        cartItems.push({prodid: item, quantity: cart.filter(i => i ===item).length})
+    })
+
+    //Gå gjennom cartItems for å lage HTML til handlekurven og regne ut totalpris
+    let cartHTML = ""
+    let totalPrice = 0
+
+    cartItems.map(ci => {
+        //Hente produktinformasjon
+        let product = products.find(i => i.prodid === ci.prodid)
+        //Skrive ut HTML
+        cartHTML += `<tr>
+                    <td class="title">${product.title}</td>
+                    <td class="price">${product.price}</td>
+                    <td clsas="quantity">${ci.quantity}</td>
+                    <td class="delete"><button onCLick="deleteFromCart${product.prodid})">x</button></td>
+                    </tr>`
+                    
+    })
+}
+
