@@ -1,8 +1,23 @@
-export default function AddToDo(){
+import "../style/form.scss"
+export default function AddToDo({todo, setTodo}){
+
+    const handleChange = (e)=>{
+        const {name, value} = e.target
+
+        setTodo((prev) => ({...prev,[name]: value}))
+        
+
+        console.log({[name]: value})
+        console.log("Todo state:",todo)
+
+    }
+
     return (
-        <form>
+        <form className="todoform">
             <label htmlFor="todotitle">Todo tittel</label>
-            <input type="text" id="todotitle" placeholder="Dra på butikken"></input>
+            <input name="title" type="text" id="todotitle" placeholder="Dra på butikken" onChange={handleChange}></input>
+            <label htmlFor="todocontent">Beskrivelse:</label>
+            <textarea name="content" id="todocontent" onChange={handleChange}></textarea>
             <button>Make todo</button>
         </form>
     )
