@@ -1,0 +1,7 @@
+Ting som ble brukt til å kjøre react
+powershell.exe -executionpolicy bypass
+npm install
+npm run dev
+
+BrowserRouter:
+npm i react-router-dom -- save-dev

@@ -39,7 +39,7 @@ function App() {
         holder seg enkel og oversiktlig.
       */}
       <AddToDo todo={todo} setTodo={setTodo} setTodoList={setTodoList}/>
-      <Todos todoItems={todoList} setTodoList={setTodolist}/>
+      <Todos todoItems={todoList} setTodoList={setTodoList}/>
     </main>
   )
 }

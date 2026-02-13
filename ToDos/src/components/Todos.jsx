@@ -1,5 +1,5 @@
 import Todo from "./Todo";
-export default function Todos(todoItems, setTodoList){
+export default function Todos({todoItems, setTodoList}){
 
     
 
