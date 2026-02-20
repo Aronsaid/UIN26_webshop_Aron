@@ -1,9 +1,9 @@
 .flex-r{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    
 
     h2{
         width: 100%;
+        padding: 1rem;
     }
 }

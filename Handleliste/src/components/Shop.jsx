@@ -1,13 +1,13 @@
-export default function Shop({title, content, id, setShopList}){
+export default function Shop({title, amount, id, setShopList}){
     const handleClick = ()=>{
         setShopList((prev) => prev.filter(item => item.id !== id))
         console.log(id)
     }
     return (
-        <article className="shop-card">
+        <article className="shoplist-card">
+            <input type="checkbox"></input>
             <h3>{title}</h3>
-            <p>{content}</p>
-            <button onClick={handleClick}>Done</button>
+            <input type="number" value={amount}/>
         </article>
     )
 }

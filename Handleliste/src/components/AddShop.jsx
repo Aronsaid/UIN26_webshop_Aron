@@ -4,27 +4,34 @@ export default function AddShop({shop, setShop, setShopList}){
     const handleChange = (e)=>{
         const {name, value} = e.target
 
-        setShop((prev) => ({...prev,[name]: value}))
+        setShopList(prev =>
+  prev.map(item =>
+    item.id === id
+      ? { ...item, amount: newAmount }
+      : item
+  )
+)
 
 
         console.log({[name]: value})
-        console.log("Shop state:",Shop)
+        console.log("Shop state:",shop)
+        
 
     }
 
     const handleClick = (e)=>{ 
         e.preventDefault()
-        const uniqId = crypto.randomUUID
+        const uniqId = crypto.randomUUID()
         setShopList((prev) => ([...prev, {id:uniqId,...shop}]))
         console.log(shop)
     }
 
     return (
         <form className="shopform" onSubmit={handleClick}>
-            <label htmlFor="shoptitle">Todo tittel</label>
-            <input name="title" type="text" id="shoptitle" placeholder="Melk" onChange={handleChange}></input>
-            <label htmlFor="shopcontent">Beskrivelse:</label>
-            <textarea name="content" id="shopcontent" onChange={handleChange}></textarea>
+            <label htmlFor="shoptitle">Vare</label>
+            <input name="title" type="text" placeholder="Melk" onChange={handleChange} required></input>
+            <label htmlFor="shopamount">Antall</label>
+            <input name="amount" type="number" placeholder="2" onChange={handleChange} required></input>
             <button>Add to shoplist</button>
         </form>
     )
