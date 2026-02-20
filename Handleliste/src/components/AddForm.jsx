@@ -26,7 +26,7 @@ export default function AddShop({shop, setShop, setShopList}){
             <input name="title" type="text"  placeholder="Melk" onChange={handleChange} required></input>
             <label htmlFor="shopamount">Antall</label>
             <input name="amount" type="number" min="1" placeholder="2" onChange={handleChange} required></input>
-            <button>Add to shoplist</button>
+            <button>Legg til i handleliste</button>
 
             
         </form>
