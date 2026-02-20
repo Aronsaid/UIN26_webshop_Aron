@@ -1,8 +1,8 @@
 import './App.css'
 import './style/shoplistcard.scss'
 import './style/layout.scss'
-import Shops from './components/Shops'
-import AddShop from './components/AddShop'
+import Shops from './components/ShoppingItem'
+import AddShop from './components/AddForm'
 import { useState } from 'react'
 
 
@@ -12,12 +12,12 @@ function App() {
         {
             id: 0,
             title: "Brød",
-            amount: 1
+            amount: 1,
         },
         {
             id: 1,
-            title: "Shampo",
-            amount: 2
+            title: "Cola zero 1.5L",
+            amount: 2,
         },
     ]
 

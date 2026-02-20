@@ -1,4 +1,4 @@
-import Shop from "./Shop";
+import Shop from "./ShoppingList";
 export default function Shops({shopItems, setShopList}){
 
 
